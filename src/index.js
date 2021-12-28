@@ -3,15 +3,15 @@ import ReactDom from 'react-dom';
 import React from 'react';
 
 import First from './components/basics/First';
-
+import WithParam from './components/basics/WithParam';
 
 const el = document.getElementById('root');
 
 ReactDom.render(
   <div>
     <First></First>
+    <WithParam title="Situação do Aluno" student="Isaac" testNote={9.5}/> 
   </div>, 
-
 el); 
 
 /*
