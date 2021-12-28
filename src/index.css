@@ -6,3 +6,8 @@ body {
   background-color: rgb(94, 94, 94);
   color: #ffffff;
 }
+
+p{
+  color: #002292;
+  font-size: 18px;
+}
