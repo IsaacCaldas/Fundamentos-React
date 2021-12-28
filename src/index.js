@@ -1,24 +1,18 @@
 import './index.css';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import React from 'react';
 
-import First from './components/basics/First';
-import WithParam from './components/basics/WithParam';
-import Fragment from './components/basics/Fragment';
+import App from './App';
 
 const el = document.getElementById('root');
 
-ReactDom.render(
-  <div>
-    <First></First>
-    <WithParam title="Situação do Aluno" student="Isaac" testNote={9.5}/> 
-    <Fragment/>
-  </div>, 
+ReactDOM.render(
+  <App/>, 
 el); 
 
 /*
 const el = document.getElementById('root');
-ReactDom.render(
+ReactDOM.render(
   <div><strong>Olá mundo!</strong></div>, 
   // sintaxe JSX, parece html, mas não é. O JSX fará uma conversão para mostrar na página como se fosse HTML via JS. Para funcionar isso precisa do import React.
   el);

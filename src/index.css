@@ -11,3 +11,7 @@ p{
   color: #dcdcdc;
   font-size: 18px;
 }
+
+h1 {
+  font-weight: lighter;
+}
