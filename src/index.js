@@ -1,6 +1,8 @@
 import ReactDom from 'react-dom';
 import React from 'react';
 
+import './index.css';
+
 /*
 const el = document.getElementById('root');
 ReactDom.render(
@@ -15,5 +17,5 @@ ReactDom.render(
   <div>
     { tag }
   </div>, 
-  
+
 el); 
