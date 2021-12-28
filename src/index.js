@@ -1,3 +1,4 @@
 import ReactDom from 'react-dom';
 
-ReactDom.render('Olá mundo!', );
+const el = document.getElementById('root');
+ReactDom.render('Olá mundo!', el);
