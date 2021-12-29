@@ -11,12 +11,18 @@ import MemberFamily from './components/basics/MemberFamily';
 import StudentsList from './components/repetition/StudentsList';
 import ProductsTable from './components/repetition/ProductsTable';
 import OddsOrEvens from './components/conditional/OddsOrEvens';
-import UserInfo from './components/conditional/UserInfo'
+import UserInfo from './components/conditional/UserInfo';
+import DirectDad from './components/comunication/DirectDad';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Comunicação direta"
+          color="#B22222">
+          <DirectDad/>
+        </Card>
         <Card
           title="Par ou Ímpar"
           color="#000111">
