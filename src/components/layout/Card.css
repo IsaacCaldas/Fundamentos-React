@@ -1,6 +1,5 @@
 .card{
-  background-color: #195cb5;
-  border: #124c97 3px solid;
+  border: 3px solid;
   border-radius: 10px;
   
   overflow: hidden;
@@ -9,7 +8,8 @@
   display: flex;
   flex-direction: column;
 
-  width: 300px;
+  max-width: 500px;
+  min-width: 500px;
 }
 
 .card .title{

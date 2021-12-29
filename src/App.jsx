@@ -12,22 +12,26 @@ export default () =>
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
         <Card
-          title="Desafio aleatório">
+          title="Desafio aleatório"
+          color="#FFD700">
           <RandomNumber min={0} max={10}/>
         </Card>
         <Card
-          title="Fragmento">
+          title="Fragmento"
+          color="#8B0000">
           <Fragment/>
         </Card>
         <Card
-          title="Boletim">
+          title="Boletim"
+          color="#228B22">
           <WithParam 
             title="Situação do Aluno" 
             student="Isaac" 
             testNote={9.5}
           /> 
         </Card>
-        <Card title="First Component">
+        <Card 
+          title="First Component">
           <First></First>
         </Card>
       </div>
