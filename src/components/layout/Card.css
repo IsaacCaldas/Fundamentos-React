@@ -1,0 +1,31 @@
+.card{
+  background-color: #195cb5;
+  border: #124c97 3px solid;
+  border-radius: 10px;
+  
+  overflow: hidden;
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+}
+
+.card .title{
+  padding: 6px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+.card .content{
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  flex-grow: 1;
+}
+.card p {
+  color: #195cb5;
+}
