@@ -12,7 +12,6 @@
   min-width: 500px;
 
   max-height: 300px;
-  min-height: 200px;
   overflow-y: auto;
 }
 
@@ -31,5 +30,5 @@
   flex-grow: 1;
 }
 .card p {
-  color: #195cb5;
+  color: #222222;
 }

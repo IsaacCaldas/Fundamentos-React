@@ -10,11 +10,17 @@ import Family from './components/basics/Family';
 import MemberFamily from './components/basics/MemberFamily';
 import StudentsList from './components/repetition/StudentsList';
 import ProductsTable from './components/repetition/ProductsTable';
+import OddsOrEvens from './components/conditional/OddsOrEvens';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Par ou Ímpar"
+          color="#000111">
+          <OddsOrEvens number={ 2 } />
+        </Card>
         <Card
           title="Produtos"
           color="#6B8E23">
