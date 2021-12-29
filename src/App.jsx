@@ -9,11 +9,17 @@ import Card from './components/layout/Card';
 import Family from './components/basics/Family';
 import MemberFamily from './components/basics/MemberFamily';
 import StudentsList from './components/repetition/StudentsList';
+import ProductsTable from './components/repetition/ProductsTable';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Produtos"
+          color="#6B8E23">
+          <ProductsTable />
+        </Card>
         <Card
           title="Lista de alunos"
           color="#5F9EA0">
