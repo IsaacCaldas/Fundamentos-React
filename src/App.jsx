@@ -22,7 +22,6 @@ export default () =>
           color="#000111">
           {/* Esse o if é como se fosse componente */}
           <UserInfo user={{name: 'Isaac'}} />
-          <UserInfo user={{email: 'fer@def.com'}} />
           {/* Esse o if é ternário */}
           <OddsOrEvens number={ 2 } />
         </Card>
