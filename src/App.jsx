@@ -6,11 +6,17 @@ import WithParam from './components/basics/WithParam';
 import Fragment from './components/basics/Fragment';
 import RandomNumber from './components/basics/RandomNumber';
 import Card from './components/layout/Card';
+import Family from './components/basics/Family';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Família"
+          color="#808000">
+          <Family surname="Pinheiros" ></Family>
+        </Card>
         <Card
           title="Desafio aleatório"
           color="#FFD700">
