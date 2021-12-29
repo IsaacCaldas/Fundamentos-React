@@ -11,6 +11,7 @@ import MemberFamily from './components/basics/MemberFamily';
 import StudentsList from './components/repetition/StudentsList';
 import ProductsTable from './components/repetition/ProductsTable';
 import OddsOrEvens from './components/conditional/OddsOrEvens';
+import UserInfo from './components/conditional/UserInfo'
 
 export default () => 
     <div className="app">
@@ -19,6 +20,10 @@ export default () =>
         <Card
           title="Par ou Ímpar"
           color="#000111">
+          {/* Esse o if é como se fosse componente */}
+          <UserInfo user={{name: 'Isaac'}} />
+          <UserInfo user={{email: 'fer@def.com'}} />
+          {/* Esse o if é ternário */}
           <OddsOrEvens number={ 2 } />
         </Card>
         <Card
