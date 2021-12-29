@@ -8,11 +8,17 @@ import RandomNumber from './components/basics/RandomNumber';
 import Card from './components/layout/Card';
 import Family from './components/basics/Family';
 import MemberFamily from './components/basics/MemberFamily';
+import StudentsList from './components/repetition/StudentsList';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Lista de alunos"
+          color="#5F9EA0">
+          <StudentsList />
+        </Card>
         <Card
           title="Família"
           color="#808000">
