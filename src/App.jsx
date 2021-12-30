@@ -14,11 +14,17 @@ import OddsOrEvens from './components/conditional/OddsOrEvens';
 import UserInfo from './components/conditional/UserInfo';
 import DirectDad from './components/communication/DirectDad';
 import IndirectDad from './components/communication/IndirectDad';
+import Input from './components/forms/Input';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Formulário"
+          color="#556B2F">
+          <Input/>
+        </Card>
         <Card
           title="Comunicação Indireta"
           color="#A0522D">

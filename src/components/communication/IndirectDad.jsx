@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IndirectSon from "./IndirectSon";
 
-{/* Em REACT para alteração de valores enviados do componente filho para o pai, é necessário o hook useState para criar um componente com estado. */}
+{/* Em REACT para alteração de valores enviados do componente filho para o pai, é necessário o hook useState para criar um componente baseado em classe com estado. */}
 
 export default props => {
 
