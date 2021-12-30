@@ -15,11 +15,21 @@ import UserInfo from './components/conditional/UserInfo';
 import DirectDad from './components/communication/DirectDad';
 import IndirectDad from './components/communication/IndirectDad';
 import Input from './components/forms/Input';
+import Counter from './components/counter/Counter';
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Contador"
+          color="#2F4F4F"
+          colorContent="#131313">
+          <Counter 
+            initialNumber={0} 
+            initialPass={1} 
+          />
+        </Card>
         <Card
           title="Formulário"
           color="#556B2F">
