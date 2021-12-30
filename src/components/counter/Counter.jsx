@@ -1,7 +1,9 @@
 import './Counter.css';
 
 import React, { Component } from 'react';
-import If, {Else} from '../conditional/If';
+import Display from './Display';
+import Buttons from './Buttons';
+import FormPass from './FormPass';
 
 {/* não é obrigatório, mas tem como colocar o constructor 
 
@@ -41,14 +43,14 @@ class Contador extends Component{
     });
   }
 
-  setNumber = (e) => {
+  setNumber = (newNumber) => {
     this.setState({
-      number: +e.target.value
+      number: newNumber
     })
   }
-  setPass = (e) => {
+  setPass = (newPass) => {
     this.setState({
-      pass: +e.target.value
+      pass: newPass
     })
   }
 
@@ -57,29 +59,22 @@ class Contador extends Component{
 
       <div className='ee'> 
         <div className="counter">
-          <div className="counter-box">
-
-          <If test={this.state.number && this.state.number < 1000000000000}>
-            <h1><strong>{ this.state.number }</strong></h1>
-
-            <Else>
-              <h1><strong>Undefined</strong></h1>
-            </Else>
-          </If>
+          <div className="counter-display">
            
-            <button onClick={this.increment}>+</button><button onClick={this.decrement}>-</button>
+           <Display number={ this.state.number }></Display>
 
-          </div>
-          
-          <div>
-            <label htmlFor="numberInput">Número inicial: </label>
-            <input id="numberInput" type="number" value={this.state.newNumber} onChange={this.setNumber} />
-          </div>
-          <div>
-            <label htmlFor="passInput">Passo: </label>
-            <input id="passInput" type="number" value={this.state.pass} onChange={this.setPass} />
-          </div>
+          <Buttons 
+            increment={this.increment} decrement={this.decrement}>
+          </Buttons>
 
+          </div>    
+
+          <FormPass 
+            number={this.state.setNumber}
+            setNumber={this.setNumber} 
+            pass={this.statesetPass}
+            setPass={this.setPass}> 
+          </FormPass>
         </div>
       </div>
 
