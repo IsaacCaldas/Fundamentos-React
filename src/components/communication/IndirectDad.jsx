@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import IndirectSon from "./IndirectSon";
+
+{/* Em REACT para alteração de valores enviados do componente filho para o pai, é necessário o hook useState para criar um componente com estado. */}
 
 export default props => {
 
-  let name = '', age = 0, bool = true;
+  const [name, setName] = useState('?'), 
+      [age, setAge] = useState(0), 
+      [bool, setBool] = useState(true);
 
   function getInfo(name, age, bool){
-    name = name;
-    age = age;
-    bool = bool;
+    setName(name);
+    setAge(age);
+    setBool(bool);
   }
 
   return (
@@ -17,7 +21,7 @@ export default props => {
       <div>
         Pai
       </div>
-      <span><strong>{ name } tem </strong></span>
+      <span><strong>{ name }</strong> tem </span>
       <span>{ age } anos</span>
       <div>{ bool ? 'Verdadeiro' : 'Falso' }</div>
       <IndirectSon whenClick={getInfo}></IndirectSon>
