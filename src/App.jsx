@@ -16,11 +16,18 @@ import DirectDad from './components/communication/DirectDad';
 import IndirectDad from './components/communication/IndirectDad';
 import Input from './components/forms/Input';
 import Counter from './components/counter/Counter';
+import Megasena from './components/Megasena/Megasena'
 
 export default () => 
     <div className="app">
       <h1>Fundamentos React</h1>
       <div className="cards-collection">
+        <Card
+          title="Mega-sena"
+          color="#7FFF00"
+        >
+          <Megasena></Megasena>
+        </Card>
         <Card
           title="Contador"
           color="#2F4F4F"

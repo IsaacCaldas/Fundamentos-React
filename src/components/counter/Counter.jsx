@@ -57,7 +57,7 @@ class Contador extends Component{
   render() {
     return (
 
-      <div className='ee'> 
+      <div> 
         <div className="counter">
           <div className="counter-display">
            
