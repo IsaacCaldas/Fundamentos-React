@@ -1,60 +1,65 @@
 import './Megasena.css';
 
-import React, { Component }from 'react';
-import DisplayMega from './DisplayMega';
-import InputMega from './InputMega';
-import ButtonMega from './ButtonMega';
+import React, { useState }from 'react';
 
-class Megasena extends Component{
+export default props => {
 
-  state = {
-    number: 0
+  function numberGenNotContains(min, max, array){
+
+    const random = parseInt(Math.random() * (max + 1 - min) + min);
+    
+    return array.includes(random) ? numberGenNotContains(min, max, array) : random;
+  }
+  
+  function numberGen(qt) {
+  
+    const numbers = Array(qt)
+      .fill(0)
+      .reduce((nums) => {
+  
+        const newNumber = numberGenNotContains(1, 60, nums);
+        return [ ...nums, newNumber];
+  
+      }, [])
+      .sort((n1, n2) => n1 - n2);
+  
+    return numbers;
   }
 
-  getNumbers = () => {
+  const [qtNumGen, setQtNumGen] = useState(props.qtNumGen || 7);
 
-  }
-  setNumber = (e) => {
-    this.setState({
-      number: +e.target.value
-    })
-  }
+  const initialNumbers = numberGen(qtNumGen);
+  const [numbers, setNumbers] = useState(initialNumbers);
+  
+  console.log(numbers);
 
-  render() {
-    return (
+  return (
 
-      <div> 
-        <div className="megasena">
-          <div className="mega-display">
-           
-            
-            <h1>
-              <div className="number-ball">2</div>
-              <div className="number-ball">12</div>
-              <div className="number-ball">18</div>
-              <div className="number-ball">25</div>
-              <div className="number-ball">32</div>
-              <div className="number-ball">45</div>
-              <div className="number-ball">49</div>
-              <div className="number-ball">57</div>
-            </h1>
+    <div> 
+      <div className="megasena">
+        <div className="mega-display">
+          <div className="number-ball">{ numbers[0] }</div>
+          <div className="number-ball">{ numbers[1] }</div>
+          <div className="number-ball">{ numbers[2] }</div>
+          <div className="number-ball">{ numbers[3] }</div>
+          <div className="number-ball">{ numbers[4] }</div>
+          <div className="number-ball">{ numbers[5] }</div>
+          <div className="number-ball">{ numbers[6] }</div>  
+        </div>    
 
-          </div>    
+        <div className="mega-form">
+          <label htmlFor="numberInput">Quantos números serão gerados: </label>
+          <input id="numberInput" min="7" max="7" type="number" value={qtNumGen} onChange={e => setQtNumGen(+e.target.value)} />
+        </div>
 
-          <div className="mega-form">
-            <label htmlFor="numberInput">Quantos números serão gerados: </label>
-            <input id="numberInput" type="number" value={7}  onChange={e => this.state.setNumber} />
-          </div>
-
-          <div className="mega-button">
-            <button onClick={1}>Gerar números</button>
-          </div>
+        <div className="mega-button">
+          <button onClick={ _ => setNumbers(numberGen(qtNumGen)) }>
+            Gerar números
+          </button>
         </div>
       </div>
+    </div>
 
-    );
-  }
+  );
 
 }
-
-export default Megasena;

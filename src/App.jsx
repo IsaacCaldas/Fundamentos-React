@@ -26,7 +26,7 @@ export default () =>
           title="Mega-sena"
           color="#7FFF00"
         >
-          <Megasena></Megasena>
+          <Megasena qtNumGen={7}></Megasena>
         </Card>
         <Card
           title="Contador"
